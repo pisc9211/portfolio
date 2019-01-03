@@ -68,7 +68,8 @@
 }
 
 .skillsSection,
-.contactSection {
+.contactSection,
+.timelineSection {
   background-color: #e74c3c;
   color: #fff;
 }
