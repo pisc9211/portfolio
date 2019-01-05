@@ -3,6 +3,11 @@
   --vermillion: #fc4a1a;
   --sunshine: #f7c733;
   --clean: #fff;
+  --teal: #45a29e;
+  --brightTeal: #66fcf1;
+  --blackish: #0b0c10;
+  --gray: #1f2833;
+  --whitish: #c5c6c7;
 }
 
 .body {
@@ -128,9 +133,10 @@ img {
 .contactSection,
 .timelineSection {
   /* background-color: #e74c3c; */
-  background-color: var(--fresh);
-  color: var(--clean);
+  background-color: var(--blackish);
+  color: var(--whitish);
 }
+
 
 .skill {
   text-align: center;
@@ -152,7 +158,7 @@ img {
 }
 
 .chart .percent {
-  color: #000;
+  color: var(--whitish);
   /* color: #f7b733; */
   line-height: 152px;
   display: inline-block;
@@ -381,7 +387,7 @@ img {
 #navigation {
   /* background-color: #e74c3c; */
   /* background-color: #4abdac; */
-  background-color: var(--fresh);
+  background-color: var(--blackish);
   padding: 20px 10px;
   z-index: 100;
   width: 100%;
@@ -471,11 +477,22 @@ img {
   transition: all 0.3s ease-in, 1s; 
 }
 
-i {
+.copyrightSection i {
   color: #fff;
 }
 
-i:hover {
-  color: var(--fresh);
+.copyrightSection i:hover {
+  color: var(--brightTeal);
   cursor: pointer;
+}
+
+.space-between {
+  height: 30px;
+}
+
+.divider {
+  height: 1px;
+  width: 100px;
+  margin: 0 auto 25px;
+  background: var(--brightTeal);
 }

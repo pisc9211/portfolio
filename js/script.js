@@ -145,7 +145,8 @@ $(document).ready(function() {
   }
 
   $('.timeLine').timeLine({
-    mainColor: '#f7c733',
-    opacity: '0.8'
+    mainColor: '#66fcf1',
+    opacity: '0.9',
+    itemAnimateDuration: 1
   });
 });
