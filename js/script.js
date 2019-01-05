@@ -13,7 +13,7 @@ $(document).ready(function() {
   })
 
   let typed = new Typed(".typed", {
-    strings: ['Software Engineer.', 'Web Developer.', 'Student.'],
+    strings: ['Software Engineer.', 'Web Developer.', 'Problem Solver.'],
     typeSpeed: 70,
     loop: true,
     startDelay: 1000,
@@ -49,7 +49,8 @@ $(document).ready(function() {
 		itemsDesktopSmall:[900,3],
 		itemsTablet:[600,2],
     itemsMobile:[480,1],
-    margin: 10
+    margin: 10,
+    rewind: true
 	})
 
 

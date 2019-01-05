@@ -120,6 +120,13 @@ img {
 }
 
 .resumeBtn {
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--clean);
+  padding: 18px 50px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-top: 20px;
   background-color: var(--sunshine);
   color: #333;
 }
@@ -230,6 +237,7 @@ img {
   margin-top: 20px;
   border: 1px solid var(--clean);
   border-radius: 2px;
+  font-weight: 700;
 }
 
 .contactButton:hover {
