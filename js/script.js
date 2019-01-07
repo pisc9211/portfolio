@@ -49,7 +49,8 @@ $(document).ready(function() {
 		itemsDesktopSmall:[900,3],
 		itemsTablet:[600,2],
     itemsMobile:[480,1],
-    margin: 10
+    margin: 10,
+    rewind: true,
 	})
 
 
