@@ -13,7 +13,7 @@ $(document).ready(function() {
   })
 
   let typed = new Typed(".typed", {
-    strings: ['Software Engineer.', 'Web Developer.', 'Student.'],
+    strings: ['Software Engineer.', 'Web Developer.', 'Problem Solver.'],
     typeSpeed: 70,
     loop: true,
     startDelay: 1000,
