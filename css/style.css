@@ -137,7 +137,6 @@ img {
 }
 
 .skillsSection,
-.contactSection,
 .timelineSection {
   /* background-color: #e74c3c; */
   background-color: var(--blackish);
@@ -238,12 +237,13 @@ img {
   border: 1px solid var(--clean);
   border-radius: 2px;
   font-weight: 700;
+  background-color: var(--sunshine);
 }
 
 .contactButton:hover {
   text-decoration: none;
   color: var(--fresh);
-  background-color: #fff;
+  background-color: var(--teal);
 }
 
 .filter a {
@@ -448,7 +448,7 @@ img {
   display: inline-block;
 }
 .owl-theme .owl-controls .owl-page span {
-  background: none repeat scroll 0 0 #869791;
+  background: none repeat scroll 0 0 #000;
   border-radius: 20px;
   display: block;
   height: 12px;

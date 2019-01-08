@@ -52,11 +52,9 @@ $(document).ready(function() {
     margin: 10,
     rewind: true,
 	})
-
-
   
   let skillsTopOffset = $(".skillsSection").offset().top
-  let statsTopOffset = $(".statsSection").offset().top
+  // let statsTopOffset = $(".statsSection").offset().top
   let countUpFinished = false
   
   $(window).scroll(function() {
@@ -72,15 +70,15 @@ $(document).ready(function() {
           $(this.el).find('.percent').text(Math.round(percent))
         }
       })
-      if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
-        $(".counter").each(function() {
-          let element = $(this)
-          let endVal = parseInt(element.text())  
+      // if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+      //   $(".counter").each(function() {
+      //     let element = $(this)
+      //     let endVal = parseInt(element.text())  
       
-          element.countup(endVal)
-        });
-        countUpFinished = true;
-      }
+      //     element.countup(endVal)
+      //   });
+      //   countUpFinished = true;
+      // }
     }
   })
 
@@ -130,12 +128,9 @@ $(document).ready(function() {
 
   const nav = $("#navigation")
   const navTop = nav.offset().top
-
-  $(window).on("scroll", stickyNavigation)
-
+  
   function stickyNavigation() {
     const body = $("body")
-
     if ($(window).scrollTop() >= navTop) {
       body.css("padding-top", nav.outerHeight() + "px")
       body.addClass("fixedNav")
@@ -144,10 +139,12 @@ $(document).ready(function() {
       body.removeClass("fixedNav")
     }
   }
-
+  
   $('.timeLine').timeLine({
     mainColor: '#66fcf1',
     opacity: '0.9',
     itemAnimateDuration: 1
   });
+
+  $(window).on("scroll", stickyNavigation)
 });
