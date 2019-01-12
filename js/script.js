@@ -45,10 +45,24 @@ $(document).ready(function() {
   $('.owl-carousel').owlCarousel({
 		autoplay:true,
 		items:4,
-		itemsDesktop:[1000,4],
-		itemsDesktopSmall:[900,3],
-		itemsTablet:[600,2],
-    itemsMobile:[480,1],
+		// itemsDesktop:[1000,4],
+		// itemsDesktopSmall:[900,3],
+		// itemsTablet:[600,2],
+    // itemsMobile:[480,1],
+    responsive:{
+      0:{
+        items:1
+      },
+      480:{
+        items:2
+      },
+      768:{
+        items:3
+      },
+      938:{
+        items: 5
+      }
+    },
     margin: 10,
     rewind: true,
 	})
