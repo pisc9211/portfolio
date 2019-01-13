@@ -20,47 +20,21 @@ $(document).ready(function() {
     showcursor: false
   })
 
-  // $('.owl-carousel').owlCarousel({
-  //   loop:false,
-  //   items: 4,
-  //   responsive:{
-  //     0:{
-  //       items:1
-  //     },
-  //     480:{
-  //       items:2
-  //     },
-  //     768:{
-  //       items:3
-  //     },
-  //     938:{
-  //       items: 5
-  //     }
-  //   },
-  //   rewind: true,
-  //   autoplay: true,
-  //   autoplayTimeout: 3000
-  // })
-
   $('.owl-carousel').owlCarousel({
 		autoplay:true,
 		items:4,
-		// itemsDesktop:[1000,4],
-		// itemsDesktopSmall:[900,3],
-		// itemsTablet:[600,2],
-    // itemsMobile:[480,1],
     responsive:{
-      0:{
+      480:{
         items:1
       },
-      480:{
+      600:{
         items:2
       },
-      768:{
-        items:3
+      900:{
+        items: 3
       },
-      938:{
-        items: 5
+      1000:{
+        items:4
       }
     },
     margin: 10,
