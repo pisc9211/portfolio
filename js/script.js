@@ -1,52 +1,51 @@
-$(window).on("load", function() {
-  $(".loader .inner").fadeOut(500, function() {
-    $(".loader").fadeOut(750);
+$(window).on('load', function() {
+  $('.loader .inner').fadeOut(500, function() {
+    $('.loader').fadeOut(750);
   });
-})
+});
 
 $(document).ready(function() {
-
   $('#slides').superslides({
     animation: 'fade',
     play: 5000,
     pagination: false
-  })
+  });
 
-  let typed = new Typed(".typed", {
+  let typed = new Typed('.typed', {
     strings: ['Software Engineer.', 'Web Developer.', 'Problem Solver.'],
     typeSpeed: 70,
     loop: true,
     startDelay: 1000,
     showcursor: false
-  })
+  });
 
   $('.owl-carousel').owlCarousel({
-		autoplay:true,
-		items:4,
-    responsive:{
-      480:{
-        items:1
+    autoplay: true,
+    items: 4,
+    responsive: {
+      0: {
+        items: 1
       },
-      600:{
-        items:2
+      600: {
+        items: 2
       },
-      900:{
+      900: {
         items: 3
       },
-      1000:{
-        items:4
+      1000: {
+        items: 4
       }
     },
     margin: 10,
-    rewind: true,
-	})
-  
-  let skillsTopOffset = $(".skillsSection").offset().top
+    rewind: true
+  });
+
+  let skillsTopOffset = $('.skillsSection').offset().top;
   // let statsTopOffset = $(".statsSection").offset().top
-  let countUpFinished = false
-  
+  let countUpFinished = false;
+
   $(window).scroll(function() {
-    if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
+    if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
       $('.chart').easyPieChart({
         easing: 'easeInOut',
         barColor: '#fff',
@@ -55,84 +54,86 @@ $(document).ready(function() {
         lineWidth: 4,
         size: 152,
         onStep: function(from, to, percent) {
-          $(this.el).find('.percent').text(Math.round(percent))
+          $(this.el)
+            .find('.percent')
+            .text(Math.round(percent));
         }
-      })
+      });
       // if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
       //   $(".counter").each(function() {
       //     let element = $(this)
-      //     let endVal = parseInt(element.text())  
-      
+      //     let endVal = parseInt(element.text())
+
       //     element.countup(endVal)
       //   });
       //   countUpFinished = true;
       // }
     }
-  })
+  });
 
-  $("[data-fancybox]").fancybox();
+  $('[data-fancybox]').fancybox();
 
-  $(".items").isotope({
-    filter: "*",
+  $('.items').isotope({
+    filter: '*',
     animationOptions: {
       duration: 1500,
       easing: 'linear',
       queue: false
     }
-  })
+  });
 
-  $("#filters a").click(function() {
-    $("#filters .current").removeClass("current")
-    $(this).addClass("current")
+  $('#filters a').click(function() {
+    $('#filters .current').removeClass('current');
+    $(this).addClass('current');
 
-    let selector = $(this).attr("data-filter")
-    $(".items").isotope({
+    let selector = $(this).attr('data-filter');
+    $('.items').isotope({
       filter: selector,
       animationOptions: {
         duration: 1500,
         easing: 'linear',
         queue: false
       }
-    })
+    });
 
-    return false
-  })
+    return false;
+  });
 
-  $("#navigation li a").click(function(e) {
-    e.preventDefault()
+  $('#navigation li a').click(function(e) {
+    e.preventDefault();
 
-    let targetElement = $(this).attr("href")
-    let targetPosition = $(targetElement).offset().top
-    $("html, body").animate({ scrollTop: targetPosition - 50}, "slow")
-  })
+    let targetElement = $(this).attr('href');
+    let targetPosition = $(targetElement).offset().top;
+    $('html, body').animate({ scrollTop: targetPosition - 50 }, 'slow');
+  });
 
-  $(".borderBtn").click(function(e) {
-    e.preventDefault()
+  $('.borderBtn').click(function(e) {
+    e.preventDefault();
 
-    let targetElement = $(this).attr("href")
-    let targetPosition = $(targetElement).offset().top
-    $("html, body").animate({ scrollTop: targetPosition - 50}, "slow")
-  })
+    let targetElement = $(this).attr('href');
+    let targetPosition = $(targetElement).offset().top;
+    $('html, body').animate({ scrollTop: targetPosition - 50 }, 'slow');
+  });
 
-  const nav = $("#navigation")
-  const navTop = nav.offset().top
-  
+  const nav = $('#navigation');
+  const navTop = nav.offset().top;
+
   function stickyNavigation() {
-    const body = $("body")
+    const body = $('body');
     if ($(window).scrollTop() >= navTop) {
-      body.css("padding-top", nav.outerHeight() + "px")
-      body.addClass("fixedNav")
+      body.css('padding-top', nav.outerHeight() + 'px');
+      body.addClass('fixedNav');
     } else {
-      body.css("padding-top", "0px")
-      body.removeClass("fixedNav")
+      body.css('padding-top', '0px');
+      body.removeClass('fixedNav');
     }
   }
-  
+
   $('.timeLine').timeLine({
     mainColor: '#66fcf1',
     opacity: '0.9',
     itemAnimateDuration: 1
   });
 
-  $(window).on("scroll", stickyNavigation)
+  $(window).on('scroll', stickyNavigation);
 });
